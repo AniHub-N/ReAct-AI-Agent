@@ -97,6 +97,51 @@ LLM → Parser → Validator → Tool → Observation → Memory → Loop → Cr
 Every layer is **explicitly controlled**, not blindly trusted.
 
 ---
+## Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/AniHub-N/ReAct-AI-Agent.git
+cd ReAct-Agent
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+
+```
+Run the Project
+
+```
+python main.py
+```
+
+## Notes
+
+This project uses a local LLM (Ollama) by default
+
+You can replace it with:
+
+OpenAI API
+
+Hugging Face models, etc
+
+(Make sure you have sufficient system resources if running locally)
+
+
+---
+
+# If you're using a local LLM
+
+Replace requirements with:
+
+```
+requests>=2.31.0
+
+```
+---
 
 ##  Project Structure
 
@@ -221,21 +266,21 @@ Action → Observation → THEN Final Answer
 
 ## Key Insights
 
-> LLMs are not reliable executors — they are suggestion generators.  
-> Tools can lie. Reasoning must verify.  
-> Structure and control matter more than prompting.  
-> Reliability > correctness in one-shot.  
-> A good agent knows when to **retry, adapt, or stop**.
+- LLMs are not reliable executors — they are suggestion generators.  
+- Tools can lie. Reasoning must verify.  
+- Structure and control matter more than prompting.  
+- Reliability > correctness in one-shot.  
+- A good agent knows when to **retry, adapt, or stop**.
 
 ---
 
 ## Future Improvements
 
-- 🔹 Tool selection policy (intelligent routing)  
-- 🔹 Multi-query search + ranking  
-- 🔹 Long-term memory (fact storage)  
-- 🔹 Reflection / planning layer  
-- 🔹 Multi-agent collaboration  
+-  Tool selection policy (intelligent routing)  
+-  Multi-query search + ranking  
+-  Long-term memory (fact storage)  
+-  Reflection / planning layer  
+-  Multi-agent collaboration  
 
 ---
 
